@@ -1,0 +1,23 @@
+Clima step by step:
+1/ Install gem CoCoaPods using command line.
+2/ Add CLLocationManagerDelagate.
+3/ create a CLLocationManager var to track location.
+4/ create a method locationManager() when location is updated sucessfully:
+	 - stop updating location as soon as loccation is found.
+	 - make a parameters then pass it to OpenWeather API to get the result.
+5/ create a method locationManager() when it fail to update location:
+	- notice user through temperature label.
+	- print error.
+6/ Set up network with AlamoFire (http request):
+	- create method (in stel 4) getWeatherData that need the url and para to get weather result
+	- call method Alamofire.request to get the data in form of JSON 
+	- make an if statement to deal with request (fail or sucess).
+7/ Create weather data model
+8/ Parsing the JSON data that API sent back, and update weather using weather model
+9/ Update User Interface
+10/ Make second view
+11/ Create a protocol and make delegate to passing data between two ViewControllers
+12/ Make function prepare Segue and set delegate to be the sender (self) in order to get data from changeCityUiViewController.
+13/ After getting cityName from ChangeCityViewController, make a new parametter and make a http request to API sever.
+14/ update everything.  
+
